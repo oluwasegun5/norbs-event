@@ -1,0 +1,106 @@
+.authenticationContainer{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.leftSide{
+    width: 50%;
+    background-color: var(--primary_balck);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.rightSide{
+    width: 50%;
+    background-color: var(--primary_green);
+}
+
+.welcome-text{
+    margin-top: 3rem;
+    width: 80%;
+}
+
+.welcome-text h1{
+    margin: 0;
+    color: white;
+}
+
+.welcome-text p{
+    margin: 5px 0;
+    color: rgb(226, 226, 226);
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.leftSide-container{
+    width: 80%;
+}
+
+.input-button-fields button{
+    border: unset;
+    background-color: var(--primary_green);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 350px;
+    height: 50px;
+}
+
+.leftSide-container a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+
+.fieldError{
+    color: red;
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+.noFieldError{
+    color: transparent;
+    margin: 4px 0;
+}
+
+.input-button-fields{
+    margin: 3rem 0;
+}
+
+.registration-step-container{
+    border-radius: 4px;
+    margin-top: 2rem;
+    width: 70%;
+}
+
+.registration-step-container .header-container{
+    display: inline-grid;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+
+.registration-step-container .header-container p{
+    color: var(--primary_green);
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.step-icon{
+    height: min-content;
+    background-color: white;
+    color: var(--primary_green);
+    font-weight: bold;
+    font-size: 13px;
+    width: 12%;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+    float: right;
+}
