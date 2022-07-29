@@ -1,29 +1,30 @@
 .authenticationContainer{
     display: flex;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
+
 .leftSide{
     width: 50%;
-    background-color: var(--primary_balck);
+    background-color: var(--primary_black);
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
+
 .rightSide{
     width: 50%;
     background-color: var(--primary_green);
 }
 
 .welcome-text{
-    margin-top: 3rem;
+    margin-top: 1rem;
     width: 80%;
 }
 
 .welcome-text h1{
     margin: 0;
-    color: white;
+    color:white;
 }
 
 .welcome-text p{
@@ -36,17 +37,16 @@
 .leftSide-container{
     width: 80%;
 }
-
-.input-button-fields button{
+.authentication-button{
     border: unset;
     background-color: var(--primary_green);
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 14px;
     border-radius: 4px;
-    width: 350px;
     height: 50px;
 }
+
 
 .leftSide-container a{
     text-decoration: none;
@@ -62,7 +62,6 @@
     font-size: 12px;
     margin: 4px 0;
 }
-
 .noFieldError{
     color: transparent;
     margin: 4px 0;
@@ -75,13 +74,13 @@
 .registration-step-container{
     border-radius: 4px;
     margin-top: 2rem;
-    width: 70%;
+    width:65%;
 }
 
 .registration-step-container .header-container{
-    display: inline-grid;
+    display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
@@ -94,13 +93,19 @@
 
 .step-icon{
     height: min-content;
-    background-color: white;
-    color: var(--primary_green);
+    background-color: var(--primary_green);
+    color: white;
     font-weight: bold;
     font-size: 13px;
     width: 12%;
     padding: 5px;
     border-radius: 4px;
     text-align: center;
-    float: right;
+}
+
+.authentication-button-alternate{
+    background-color: white;
+    color: var(--primary_green);
+    font-size: 12px;
+    font-weight: bold;
 }

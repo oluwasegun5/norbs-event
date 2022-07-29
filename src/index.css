@@ -1,14 +1,7 @@
-
 :root{
   --primary_green:#0CCE6B;
-  --primary_balck:#0C090D;
+  --primary_black:#0C090D;
 }
-
 *{
   font-family: 'Raleway', sans-serif;
-}
-
-body{
-  margin: 0;
-  box-sizing: border-box;
 }

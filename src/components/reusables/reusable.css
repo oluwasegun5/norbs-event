@@ -1,6 +1,6 @@
 .input-container{
     height: 50px;
-    border: 2px solid lightgrey;
+    border: 2px solid white;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -8,9 +8,8 @@
     justify-content: space-between;
     padding: 0 10px;
 }
-
 .label-container{
-    background-color: var(--primary_green);
+    background-color: white;
     height: 20px;
     width: 63px;
     border-radius: 4px;
@@ -21,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .input-container input{
@@ -38,18 +38,14 @@
 }
 
 .input-container:focus-within{
-    border: 2px solid white;
+    border: 2px solid var(--primary_green);
 }
 
 .input-container img{
     height: 16px;
 }
 
-.leftSide-container{
-    width: 80%;
-}
-
-.input-error-container{
+.input-error-container {
     height: 25px;
     margin: 10px 0;
 }

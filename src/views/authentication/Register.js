@@ -1,41 +1,53 @@
-import Input from "../../components/reuseables/Input";
-import emailIcon from "../../assets/emailIcon.svg"
-import passwordIcon from "../../assets/passwordIcon.svg"
+import Input from "../../components/reusables/Input"
+import emailIcon from "../../assets/email.svg"
 import "./authentication.css"
-import {useState} from "react";
-import StepContainer from "../../components/authentication/register/StepContainer";
+import { useState } from "react"
+import StepContainer from "./register/StepContainer"
 
-const Register = () =>{
-    const [userInput, setUserInput] = useState({})
-    const [fieldError, setFieldError] = useState(
-        {
-            email: { message: "", error: false},
-            password: { message: "", error: false}
-        }
+import { useNavigate } from "react-router-dom";
+
+
+const Register = () => {
+
+    let navigate = useNavigate()
+
+    const[userInput, setUserInput] = useState({})
+    const[step, setStep] = useState(1)
+    const[fieldError, setFieldError] = useState(
+      {
+        firstName:{message:"", error: false},
+        lastName:{message:"", error: false},
+        email: {message:"", error: false},
+        password:{message:"", error: false},
+        confirmPassword:{message:"", error: false},
+      }
     )
-
-    const handleChange = (e)=>{
-        setUserInput({...userInput, [e.target.name]: e.target.value })
-        checkIfFieldIsEmpty(e)
+      
+    const handleChange = (e) => {
+            setUserInput({...userInput, [e.target.name]:e.target.value})
+            checkIfFieldIsEmpty(e)
     }
 
-    const handleClick = ()=>{
+    const handleClick = () =>{
         console.log(userInput)
     }
 
-    const checkIfFieldIsEmpty = (e)=>{
-        switch (e.target.name) {
+    const checkIfFieldIsEmpty = (e) => {
+        switch(e.target.name){
             case "email":
                 if(e.target.value === ""){
+                    setFieldError(
+                        {
+                            ...fieldError,
+                             [e.target.name]: 
+                             {
+                                message: "please enter a valid email",
+                                error: true
+                            }
+                        })
+                }else{
                     setFieldError({
-                        ...fieldError,[e.target.name]: {
-                            message: "Please enter a valid email",
-                            error: true
-                        }
-                    })
-                }else {
-                    setFieldError({
-                        ...fieldError, [e.target.name]: {
+                        ...fieldError, [e.target.name]:{
                             message: "",
                             error: false
                         }
@@ -43,61 +55,92 @@ const Register = () =>{
                 }
                 break;
             case "password":
-                if(e.target.value ===""){
+                if(e.target.value === ""){
+                    setFieldError(
+                        {
+                            ...fieldError,
+                            [e.target.name]: 
+                            {
+                                message: "please enter a password",
+                                error: true
+                            }
+                        })
+                }else{
                     setFieldError({
-                        ...fieldError,[e.target.name]: {
-                            message: "Please enter a password",
-                            error: true
-                        }
-                    })
-                }else {
-                    setFieldError({
-                        ...fieldError, [e.target.name]: {
+                        ...fieldError, [e.target.name]:{
                             message: "",
                             error: false
                         }
                     })
                 }
                 break;
+            
             default:
                 break;
+
         }
-        if(e.target.value === '') return true
-    }
-
-    const checkIfItIsEmail = ()=>{
 
     }
+    const checkIfItIsEmail = () =>{
 
+    }
 
     return(
-        <div className="authenticationContainer">
+       <div className="authenticationContainer">
             <div className="leftSide">
+               
                 <div className="leftSide-container">
-                    <a href="./Login">
-                        Have an account?
-                        <span style={{
-                            color: 'var(--primary_green)',
+                    <a onClick={()=>navigate("/Login")}>
+                        have an account?
+                        <span  style={{
+                            color : 'var(--primary_green)',
                             marginLeft: '4px'
-                        }}>
-                            log in
+                            }}>
+                            Login
                         </span>
                     </a>
                     <div className="welcome-text">
                         <h1>Welcome To Norbs</h1>
-                        <p>We are event management platform,
-                            aim at helping you facilitate and run a smooth event</p>
+                        <p>
+                            We are an event management platform, aimed at helping you facilitate and run a smooth event
+                        </p>
                     </div>
-                    <StepContainer step={1} headerTitle="Let's know you">
-                        <Input text="email" handleChange={handleChange} icon={emailIcon} label="email" fieldError={fieldError}/>
-                        <Input text="password" handleChange={handleChange} icon={passwordIcon} label="password" fieldError={fieldError}/>
-                    </StepContainer>
+                    {step === 1 && <StepContainer step={1} headTitle="Let's know you ">
+                       <Input text="text" handleChange={handleChange} icon={emailIcon} label="firstName" fieldError={fieldError}/>
+                       <Input text="text" handleChange={handleChange} icon={emailIcon} label="lastName" fieldError={fieldError}/>
+                       <Input text="text" handleChange={handleChange} icon={emailIcon} label="email" fieldError={fieldError}/>
+                    </StepContainer>}
+
+                    {step === 2 && <StepContainer step={2} headTitle="Let's Secure your Details ">
+                       <Input text="text" handleChange={handleChange} icon={emailIcon} label="firstName" fieldError={fieldError}/>
+                       <Input text="text" handleChange={handleChange} icon={emailIcon} label="lastName" fieldError={fieldError}/>
+                       <Input text="text" handleChange={handleChange} icon={emailIcon} label="email" fieldError={fieldError}/>
+
+                    </StepContainer>}
+
+                    {step === 1 && <button onClick={()=> setStep(2)} style={{width: '65%'}} className="authentication-button" >
+                      Next Step
+                    </button>}
+
+                    {step === 2 &&
+                      <div style={
+                        {display: "flex", justifyContent: "space-between"}
+                      }>
+
+                      <button onClick={()=> setStep(1)} style={{width: '45%'}} className="authentication-button-alternate">
+                        Go Back
+                      </button>
+
+                      <button style={{width: '45%'}} className="authentication-button" onClick={handleClick}>
+                        Register
+                      </button>
+                    </div>}
+
                     <div className="social-media">
                         <a>
-                            <div className="social-media-icon">
-
-                            </div>
+                            <div className="social-media-icon"></div>
                         </a>
+
                     </div>
                 </div>
             </div>
@@ -106,7 +149,7 @@ const Register = () =>{
             </div>
 
         </div>
+       
     )
 }
-
 export default Register
