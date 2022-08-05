@@ -1,14 +1,17 @@
 import './App.css';
-import Register from './views/authentication/Register';
-import { Routes, Route} from "react-router-dom";
-import Login from "./views/authentication/Login";
+import Login from "./views/authentication/Login"
+import Register from "./views/authentication/Register"
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./views/dashboard/Dashboard";
 
-function App() {
+
+function App(){
   return (
     <div className="App">
         <Routes>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element={<Register/>}/>
+           <Route path="/login" element={ <Login /> }/>
+           <Route path="/register" element={ <Register /> }/>
+           <Route path="/dashboard/*" element={ <Dashboard /> }/>
         </Routes>
     </div>
   );

@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: center;
 }
+.leftSide-container a{
+    color: white;
+    text-decoration: none;
+}
 
 .rightSide{
     width: 50%;
@@ -22,33 +26,30 @@
     width: 80%;
 }
 
-.welcome-text h1{
+.welcome-text h1 {
     margin: 0;
-    color:white;
-}
+    color: rgb(226, 226, 226);}
 
-.welcome-text p{
-    margin: 5px 0;
+
+.welcome-text p {
+    margin: 10px 0;
     color: rgb(226, 226, 226);
     line-height: 25px;
     font-size: 14px;
 }
 
-.leftSide-container{
-    width: 80%;
-}
-.authentication-button{
+.authentication-button {
     border: unset;
-    background-color: var(--primary_green);
+    background-color: white;
     color: black;
     font-weight: bold;
     font-size: 14px;
     border-radius: 4px;
+   /* width: 100%; */
     height: 50px;
 }
 
-
-.leftSide-container a{
+.leftSide-container p {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -57,55 +58,59 @@
     cursor: pointer;
 }
 
-.fieldError{
+.fieldError {
     color: red;
     font-size: 12px;
-    margin: 4px 0;
-}
-.noFieldError{
-    color: transparent;
-    margin: 4px 0;
+    margin: 10px 0;
 }
 
-.input-button-fields{
+.noFieldError{
+    color: transparent;
+    margin: 10px 0;
+}
+
+.input-button-fields {
     margin: 3rem 0;
 }
 
-.registration-step-container{
+.registration-step-container {
     border-radius: 4px;
     margin-top: 2rem;
-    width:65%;
+    width: 70%;
 }
 
-.registration-step-container .header-container{
+.registration-step-container .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.registration-step-container .header-container p{
+.registration-step-container .header-container p {
     color: var(--primary_green);
     font-size: 12px;
     font-weight: bold;
     margin: 0;
 }
 
-.step-icon{
+.step-icon {
     height: min-content;
-    background-color: var(--primary_green);
-    color: white;
+    background-color: white;
+    color: var(--primary_green);
     font-weight: bold;
     font-size: 13px;
     width: 12%;
     padding: 5px;
     border-radius: 4px;
     text-align: center;
+    float: right;
 }
-
 .authentication-button-alternate{
-    background-color: white;
+    background-color: transparent;
     color: var(--primary_green);
-    font-size: 12px;
+    border: 1ppx solid white;
+    border-radius: 4px;
+    font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
