@@ -1,0 +1,55 @@
+{
+  "accounts": [
+    {
+      "firstName": "Oluwasegun",
+      "lastName": "adeayo",
+      "email": "Adeayosegun5@gmail.com",
+      "phone": "09054935395",
+      "password": "qwertyuiop",
+      "confirm": "qwertyuiop",
+      "id": 1
+    }
+  ],
+  "events": [
+    {
+      "id" : 1,
+      "date_created" : "2015-12-23",
+      "date_updated" : "2015-12-23",
+      "location" : "",
+      "venue" : "",
+      "stop_time" : "",
+      "start_time" : "",
+      "event_theme" : "",
+      "description" : "",
+      "event_category" : "",
+      "event_date" : "",
+      "created_by" : "",
+      "host" : "",
+      "guests" : [],
+      "attendees" : [],
+      "event_banner" : "",
+      "event_image" : "",
+      "sponsors": [],
+      "ticket_category" : "",
+      "ticket_fee" : "",
+      "event_team" : [],
+      "event_dress_code" : "",
+      "number_of_seats" : "",
+      "available" : ""
+    }
+  ],
+  "fakeEvents": [
+    {
+      "title" : "Alakija",
+      "description" : "today is the day the lord has made"
+    },
+    {
+      "title" : "Norbs",
+      "description" : "get together landmark beach"
+    },
+    {
+      "title" : "Ujay",
+      "description" : "The gathering of the summoned"
+    }
+  ]
+}

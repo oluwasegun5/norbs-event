@@ -1,0 +1,107 @@
+.my-events-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-radius: 4px;
+    align-items: center;
+    background-color: white;
+}
+
+.my-events-header > button{
+    background-color: var(--primary_black);
+    border: unset;
+    padding: 12px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    height: 45px;
+}
+
+.my-events-header-filter{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+#filter-date{
+    width: 200px;
+    height: 15px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.my-events-header-filter p{
+    margin: 0;
+    font-size: 12px;
+    color: var(--primary_green);
+    font-weight: bold;
+}
+
+.my-events-container{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#filter-search{
+    width: 30em;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.my-events-cards{
+    padding: 5px;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.event-cards{
+    position: relative;
+    height: 20vh;
+    border-radius: 6px;
+    background-color: white;
+    width: 20vw;
+    contain: content;
+    display: flex;
+}
+
+.event-actions{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.image-containers{
+    height: 100%;
+    width: 50%;
+    background-size: contain;
+    background: round;
+}
+
+.event-actions > button{
+    background-color: var(--dashboard_main);
+    color: white;
+    border-top-left-radius: 6px;
+    padding: 10px 20px;
+    border: unset;
+    cursor: pointer;
+}
+
+.event-details p{
+    color: rgb(80 80 80);
+    font-size: 12px;
+    margin: 0;
+}
+
+.event-details h5{
+    color: var(--dashboard_accent);
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.event-details{
+    padding: 10px;
+}

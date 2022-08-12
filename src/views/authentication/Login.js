@@ -4,6 +4,7 @@ import "./authentication.css"
 import { useState } from "react"
 import Input from "../../components/reusable/Input";
 import { useNavigate} from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
     let navigate = useNavigate()
@@ -21,7 +22,11 @@ const Login = () => {
     }
 
     const handleClick = () =>{
-        console.log(userInput)
+        axios.get(`http://localhost:5000/accounts?email=${userInput["email"]}`,userInput).
+        then((result) => {
+            result.data[0].password === userInput["password"] && navigate("/dashboard")
+        })
+        .catch((error) => console.log(error))
     }
 
     const checkIfFeildIsEmpty =(e) =>{
