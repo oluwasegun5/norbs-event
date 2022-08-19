@@ -4,13 +4,13 @@ import {BsFillWalletFill} from "react-icons/bs";
 
 
 const SideNav = () => {
-    const [width, setWidth] = useState("20%")
+    const [width, setWidth] = useState("15%")
     const [activeLink, setActiveLink] = useState(null)
     let activeStyle = {backgroundColor: "#474747",color: 'var(--primary_green)'}
 
     const links = ["events", "analytics", "marketing"]
 
-    function toggleWidth() { width === "20%" ? setWidth("5%"): setWidth("20%") }
+    function toggleWidth() { width === "15%" ? setWidth("5%"): setWidth("15%") }
 
     return(
         <div className='dashboardSideNav' style={{width: width}}>
@@ -29,10 +29,10 @@ const SideNav = () => {
                                 key={index}
                                 onClick={() => setActiveLink(link)}
                                 style={activeLink === link ? activeStyle : {color: 'white'}}>
-                            <BsFillWalletFill fontSize={20}
-                                 style={width==='120%'&&{marginRight: "20px"}}
+                            <BsFillWalletFill fontSize={15}
+                                 style={width==='120%'&&{marginRight: "15px"}}
                                  color={activeLink === link ? 'var(--primary_green)' : 'white'}/>
-                            {width==='20%'&& link}
+                            {width==='15%'&& link}
                         </button>
                     )}
                 </div>

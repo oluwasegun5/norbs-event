@@ -52,9 +52,8 @@
 
 .my-events-cards{
     padding: 5px;
-    margin-top: 1em;
+    margin-top: 2em;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -66,6 +65,7 @@
     width: 20vw;
     contain: content;
     display: flex;
+    margin-right: 2em;
 }
 
 .event-actions{

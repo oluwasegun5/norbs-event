@@ -17,7 +17,7 @@ const Login = () => {
     
     )
     const handleChange= (e)  =>{
-        setUserInput ({... userInput,[e.target.name]: e.target.value})
+        setUserInput ({...userInput,[e.target.name]: e.target.value})
         checkIfFeildIsEmpty(e)
     }
 
